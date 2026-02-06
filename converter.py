@@ -9,7 +9,15 @@ import re
 class DarkProConverter:
     def __init__(self, root):
         self.root = root
-        self.root.title("Minimal Audio to MP4 Pro (Dark Mode)")
+        self.root.title("Minimal Audio to MP4 Pro")
+        
+        # --- 아이콘 설정 추가 ---
+        try:
+            # icon.ico 파일이 같은 폴더에 있어야 합니다.
+            self.root.iconbitmap("icon.ico")
+        except:
+            pass
+
         self.root.geometry("700x550")
         self.root.configure(bg="#1e1e1e") # 다크모드 배경
 
